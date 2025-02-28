@@ -11,22 +11,15 @@ class StringBuilder {
   }
 
   padEnd(str) {
-    this.#value = this.#value.split('');
-    this.#value.push(str);
-    this.#value = this.#value.join('');
+    this.#value += str;
   }
 
   padStart(str) {
-    this.#value = this.#value.split('');
-    this.#value.unshift(str);
-    this.#value = this.#value.join('');
+    this.#value = str + this.#value;
   }
 
   padBoth(str) {
-    this.#value = this.#value.split(',');
-    this.#value.unshift(str);
-    this.#value.push(str);
-    this.#value = this.#value.join('');
+    this.#value = str + this.#value + str;
   }
 }
 
